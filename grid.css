@@ -91,24 +91,112 @@ main {
 .grid-item1 {
   background-image: var(--red);
   grid-area: item1;
+  /* opacity: 0; */
+  animation: fadeIn 0.5s ease-in-out;
+  -webkit-animation: fadeIn 0.5s ease-in-out;
 }
 
 .grid-item2 {
   background-image: var(--yellow);
   grid-area: item2;
+  animation: flash 0.5s ease-in-out;
+  -webkit-animation: flash 0.5s ease-in-out;
 }
 
 .grid-item3 {
   background-image: var(--green);
   grid-area: item3;
+  animation: spin 0.5s ease-in-out;
+  -webkit-animation: spin 0.5s ease-in-out;
 }
 
 .grid-item4 {
   background-color: #ff00ff;
   grid-area: item4;
+  animation: flyinX 0.5s ease-in-out;
+  -webkit-animation: flyinX 0.5s ease-in-out;
 }
 
 .grid-item5 {
   background-image: var(--blue);
   grid-area: item5;
+  animation: flyinY 0.5s ease-in-out;
+  -webkit-animation: flyinY 0.5s ease-in-out;
+}
+
+/* css keyframes */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes flash {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+}
+  100% {
+    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+}
+}
+
+@keyframes flyinX {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+    -webkit-transform: translateX(-100%);
+    -moz-transform: translateX(-100%);
+    -ms-transform: translateX(-100%);
+    -o-transform: translateX(-100%);
+}
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+}
+}
+
+@keyframes flyinY {
+  0% {
+    opacity: 0;
+    transform: translateY(-100%);
+    -webkit-transform: translateY(-100%);
+    -moz-transform: translateY(-100%);
+    -ms-transform: translateY(-100%);
+    -o-transform: translateY(-100%);
+}
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+}
 }
