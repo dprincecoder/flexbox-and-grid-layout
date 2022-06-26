@@ -11,15 +11,33 @@ header {
   height: fit-content;
   box-shadow: 0px 0px 5px rgb(168, 168, 168);
 }
-
+@media only screen and (min-width: 200px) and (max-width: 560px) {
+  .header {
+    width: 100%;
+    height: fit-content;
+  }
+}
 nav {
   width: 100%;
   display: flex;
   justify-content: space-between;
 }
+@media only screen and (min-width: 200px) and (max-width: 560px) {
+  nav {
+    width: 100%;
+    height: fit-content;
+    /* display: flex; */
+    flex-direction: column;
+  }
+}
 
 .logo {
   padding: 10px;
+}
+@media only screen and (min-width: 200px) and (max-width: 560px) {
+  .logo {
+    padding: 5px;
+  }
 }
 
 .logo h1 {
@@ -28,11 +46,23 @@ nav {
   color: hsl(31, 77%, 52%);
   font-family: "Big Shoulders Display", cursive;
 }
+@media only screen and (min-width: 200px) and (max-width: 560px) {
+  .logo h1 {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+}
 
 .nav-list {
   display: flex;
   padding: 8px;
   margin-right: 3rem;
+}
+@media only screen and (min-width: 200px) and (max-width: 560px) {
+  .nav-list {
+    width: 100%;
+    height: fit-content;
+  }
 }
 
 .list-item {
@@ -67,6 +97,12 @@ main {
   /* margin: 1rem; */
   padding: 2rem 3rem;
 }
+@media only screen and (min-width: 200px) and (max-width: 560px) {
+  main {
+    width: 100%;
+    padding: 1rem;
+  }
+}
 
 .container {
   width: 100%;
@@ -76,9 +112,21 @@ main {
   justify-content: center;
   padding: 2rem;
 }
+@media only screen and (min-width: 200px) and (max-width: 560px) {
+  .container {
+    padding: 5px;
+  }
+}
 
 .flex-container {
   display: flex;
+}
+@media only screen and (min-width: 200px) and (max-width: 560px) {
+  .flex-container {
+    width: 100%;
+    height: fit-content;
+    flex-direction: column;
+  }
 }
 
 .sedans,
@@ -89,6 +137,22 @@ main {
   align-items: center;
   justify-content: center;
   padding: 1rem;
+}
+@media only screen and (min-width: 200px) and (max-width: 560px) {
+  .sedans,
+  .suvs,
+  .luxury {
+    width: 100%;
+    height: fit-content;
+    flex-direction: column;
+    padding: 8px;
+    margin-bottom: 10px;
+    border-radius:  10px;
+    -webkit-border-radius:  10px;
+    -moz-border-radius:  10px;
+    -ms-border-radius:  10px;
+    -o-border-radius:  10px;
+}
 }
 
 .wrap {
@@ -177,7 +241,7 @@ main {
   -ms-border-radius: 30px;
   -o-border-radius: 30px;
   font-family: "Lexend Deca", sans-serif;
-   border: 1px solid hsl(0, 0%, 95%);
+  border: 1px solid hsl(0, 0%, 95%);
 
   cursor: pointer;
   transition: all 0.3s ease-in-out;
@@ -210,6 +274,5 @@ main {
 
 .luxury-btn {
   font-size: 15px;
-  color:  hsl(179, 100%, 13%)
-;
+  color: hsl(179, 100%, 13%);
 }

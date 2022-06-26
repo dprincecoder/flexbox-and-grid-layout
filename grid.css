@@ -20,14 +20,33 @@ header {
   box-shadow: 0px 0px 5px rgb(168, 168, 168);
 }
 
+@media only screen and (min-width: 200px) and (max-width: 560px) {
+  .header {
+    width: 100%;
+    height: fit-content;
+  }
+}
+
 nav {
   width: 100%;
   display: flex;
   justify-content: space-between;
 }
+@media only screen and (min-width: 200px) and (max-width: 560px) {
+  nav {
+    width: 100%;
+    height: fit-content;
+    flex-direction: column;
+  }
+}
 
 .logo {
   padding: 10px;
+}
+@media only screen and (min-width: 200px) and (max-width: 560px) {
+  .logo {
+    padding: 5px;
+  }
 }
 
 .logo h1 {
@@ -36,11 +55,23 @@ nav {
   color: hsl(31, 77%, 52%);
   font-family: "Big Shoulders Display", cursive;
 }
+@media only screen and (min-width: 200px) and (max-width: 560px) {
+  .logo h1 {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+}
 
 .nav-list {
   display: flex;
   padding: 8px;
   margin-right: 3rem;
+}
+@media only screen and (min-width: 200px) and (max-width: 560px) {
+  .nav-list {
+    width: 100%;
+    height: fit-content;
+  }
 }
 
 .list-item {
@@ -50,6 +81,7 @@ nav {
   background-color: hsl(179, 100%, 13%);
   border-radius: 5px;
 }
+
 .list-item:hover {
   background-color: hsl(179, 100%, 20%);
   transition: all 0.3s ease-in-out;
@@ -74,6 +106,12 @@ main {
   background-image: var(--background);
   padding: 4rem;
 }
+@media only screen and (min-width: 200px) and (max-width: 560px) {
+  main {
+    padding: 1rem;
+    height: fit-content;
+  }
+}
 
 .grid-container {
   display: grid;
@@ -86,6 +124,12 @@ main {
     "item1 item1 item1 item2"
     "item3 item3 item4 item4"
     "item3 item3 item5 item5";
+}
+@media only screen and (min-width: 200px) and (max-width: 560px) {
+  .grid-container {
+    grid-template-columns: 50px 20px 80px 50px;
+    grid-template-rows: 80px 90px 110px;
+  }
 }
 
 .grid-item1 {
@@ -153,14 +197,14 @@ main {
     -moz-transform: rotate(0deg);
     -ms-transform: rotate(0deg);
     -o-transform: rotate(0deg);
-}
+  }
   100% {
     transform: rotate(360deg);
     -webkit-transform: rotate(360deg);
     -moz-transform: rotate(360deg);
     -ms-transform: rotate(360deg);
     -o-transform: rotate(360deg);
-}
+  }
 }
 
 @keyframes flyinX {
@@ -171,7 +215,7 @@ main {
     -moz-transform: translateX(-100%);
     -ms-transform: translateX(-100%);
     -o-transform: translateX(-100%);
-}
+  }
   100% {
     opacity: 1;
     transform: translateX(0);
@@ -179,7 +223,7 @@ main {
     -moz-transform: translateX(0);
     -ms-transform: translateX(0);
     -o-transform: translateX(0);
-}
+  }
 }
 
 @keyframes flyinY {
@@ -190,7 +234,7 @@ main {
     -moz-transform: translateY(-100%);
     -ms-transform: translateY(-100%);
     -o-transform: translateY(-100%);
-}
+  }
   100% {
     opacity: 1;
     transform: translateY(0);
@@ -198,5 +242,5 @@ main {
     -moz-transform: translateY(0);
     -ms-transform: translateY(0);
     -o-transform: translateY(0);
-}
+  }
 }
